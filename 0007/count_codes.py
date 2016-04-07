@@ -6,7 +6,6 @@
 import os
 
 support = ['.cpp','.c','.py']
-PATH = r'g:\desktop\test'
 def countCodes(path,cnt,noneCnt,comCnt):
     ext = os.path.splitext(path)[1]
     if ext not in support:
@@ -57,6 +56,6 @@ def countAllCodes(fpath):
     print u'总行数     空行       注释       净代码行数'
     print '{:<10}'.format(totCnt),'{:<10}'.format(totNoneCnt),'{:<10}'.format(totComCnt),'{:<10}'.format(totCnt-totNoneCnt-totComCnt)
         
-#print u'请输入文件夹路径'
-#PATH = raw_input()
+print u'请输入文件夹路径'
+PATH = raw_input()
 countAllCodes(PATH)
